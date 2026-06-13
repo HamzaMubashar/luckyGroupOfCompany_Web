@@ -1,0 +1,25 @@
+{
+  "short_name": "Lucky Group",
+  "name": "Lucky Group of Company",
+  "icons": [
+    {
+      "src": "lucky-favicon.png",
+      "sizes": "256x256 192x192 128x128 96x96 48x48 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "lucky-favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "lucky-favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
