@@ -325,26 +325,26 @@ const DrawerCard = styled.section`
   }
 `;
 
-const DrawerSubCard = styled.div`
-  background: rgba(10, 22, 40, 0.03);
-  border: 1px solid rgba(201, 168, 76, 0.18);
-  border-radius: 16px;
-  padding: 16px;
+// const DrawerSubCard = styled.div`
+//   background: rgba(10, 22, 40, 0.03);
+//   border: 1px solid rgba(201, 168, 76, 0.18);
+//   border-radius: 16px;
+//   padding: 16px;
 
-  h5 {
-    margin: 0 0 8px;
-    font-family: "Playfair Display", serif;
-    font-size: 16px;
-    color: ${colors.navy};
-  }
+//   h5 {
+//     margin: 0 0 8px;
+//     font-family: "Playfair Display", serif;
+//     font-size: 16px;
+//     color: ${colors.navy};
+//   }
 
-  p {
-    margin: 0;
-    color: ${colors.grayMid};
-    font-size: 13px;
-    line-height: 1.65;
-  }
-`;
+//   p {
+//     margin: 0;
+//     color: ${colors.grayMid};
+//     font-size: 13px;
+//     line-height: 1.65;
+//   }
+// `;
 
 const ServiceList = styled.div`
   display: grid;
@@ -1385,28 +1385,28 @@ const FooterCol = styled.div`
   }
 `;
 
-const FooterSocial = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-`;
+// const FooterSocial = styled.div`
+//   display: flex;
+//   gap: 10px;
+//   margin-top: 16px;
+// `;
 
-const SocialBtn = styled.a`
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  text-decoration: none;
-  transition: background 0.2s;
+// const SocialBtn = styled.a`
+//   width: 36px;
+//   height: 36px;
+//   border-radius: 8px;
+//   background: rgba(255, 255, 255, 0.06);
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: 15px;
+//   text-decoration: none;
+//   transition: background 0.2s;
 
-  &:hover {
-    background: rgba(201, 168, 76, 0.2);
-  }
-`;
+//   &:hover {
+//     background: rgba(201, 168, 76, 0.2);
+//   }
+// `;
 
 const FooterBottom = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.07);
