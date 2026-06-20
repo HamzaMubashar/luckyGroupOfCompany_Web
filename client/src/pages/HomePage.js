@@ -5,6 +5,17 @@ import bp from "../constants/breakpoints";
 import SectionTitle from "../components/SectionTitle";
 import { FeatureCard, StatCard } from "../components/Cards";
 import luckyLogo from "../assets/lucky-logo.png";
+import ownerPic from "../assets/owner.jpeg";
+import buildersLogo from "../assets/icons/lg_builders.png";
+import holdersLogo from "../assets/icons/lg_holders.png";
+import erajLogo from "../assets/icons/lg_eraj.png";
+import tradersLogo from "../assets/icons/lg_traders.png";
+import foundationLogo from "../assets/icons/lg_foundation.png";
+import buildersFrame from "../assets/frame/frame_builders.jpeg";
+import holdingFrame from "../assets/frame/frame_holding.jpeg";
+import erajFrame from "../assets/frame/frame_eraj.jpeg";
+import tradersFrame from "../assets/frame/frame_traders.jpeg";
+import foundationFrame from "../assets/frame/frame_foundation.jpeg";
 
 const pageStats = [
   { value: "4", label: "Business Divisions" },
@@ -17,7 +28,8 @@ const companyCards = [
   {
     id: "01",
     title: "Lucky Builders and Development",
-    accent: "🏗️",
+    logo: buildersLogo,
+    companyImage: buildersFrame,
     text: "Delivering high-quality construction, development, and project management solutions with a focus on innovation, quality, and customer satisfaction from residential to large commercial builds.",
     tags: [
       "Residential Construction",
@@ -29,6 +41,7 @@ const companyCards = [
       heading: "Lucky Builders and Development",
       description:
         "A forward-focused construction and development company delivering dependable, design-led results for residential, commercial, and mixed-use projects. The detail content can be expanded later with official project-specific information.",
+      address: "13 BI-BII Ghalib Market Gulberg III, Lahore",
       coreServices: [
         "Turnkey Construction",
         "Project Planning",
@@ -55,45 +68,46 @@ const companyCards = [
   {
     id: "02",
     title: "Lucky Global Holdings Limited",
-    accent: "📊",
-    text: "A diversified holding company focused on strategic investments, business development, and long-term value creation across multiple industries through responsible management and financial planning.",
+    logo: holdersLogo,
+    companyImage: holdingFrame,
+    text: "A holding company focused on development of building projects and buying and selling of own real estate.",
     tags: [
-      "Strategic Investments",
-      "Business Management",
-      "Portfolio Development",
-      "Corporate Holdings",
+      "Development of Building Projects",
+      "Buying and Selling of Own Real Estate",
+      "Real Estate Holdings",
+      "Property Development",
     ],
     details: {
       heading: "Lucky Global Holdings Limited",
       description:
-        "A holdings platform designed to coordinate investments, business expansion, and governance across the group. This placeholder content is intentionally generic and can be replaced later with final company-approved copy.",
+        "Lucky Global Holdings Limited carries out business in two core categories: development of building projects and buying and selling of own real estate.",
+      address: "128 City Road, London, United Kingdom, EC1V 2NX",
       coreServices: [
-        "Investment Strategy",
-        "Portfolio Oversight",
-        "Business Growth Planning",
-        "Holding Structure Management",
+        "Development of Building Projects",
+        "Buying and Selling of Own Real Estate",
       ],
       whyChooseUs: [
-        "Strategic leadership",
-        "Long-term value orientation",
-        "Measured decision making",
-        "Multi-industry perspective",
+        "Focused real estate activity",
+        "Project development experience",
+        "Property ownership and sales expertise",
+        "Clear business direction",
       ],
       missionVision: {
         mission:
-          "Create stable growth through disciplined investment and business stewardship.",
+          "Develop building projects and manage owned real estate with a disciplined, value-focused approach.",
         vision:
-          "Build a resilient holdings platform that supports the group’s long-term expansion.",
+          "Grow as a trusted real estate company delivering quality developments and responsible property transactions.",
       },
       readyTitle: "Looking for strategic partnership?",
       readyText:
-        "We can discuss an investment or growth opportunity once your details are ready.",
+        "We can discuss building development or property transactions once your details are ready.",
     },
   },
   {
     id: "03",
     title: "Eraj Global Trading SMC Pvt. Ltd.",
-    accent: "🌍",
+    logo: erajLogo,
+    companyImage: erajFrame,
     text: "Providing reliable local and international trading solutions with professionalism and integrity — connecting markets through efficient import, export, sourcing, and procurement services.",
     tags: [
       "Import & Export",
@@ -105,6 +119,7 @@ const companyCards = [
       heading: "Eraj Global Trading SMC Pvt. Ltd.",
       description:
         "A trading and sourcing company focused on connecting markets with reliable procurement and supply support. Replace this content later with the official operational scope and market focus.",
+      address: "House # 32 A, Street # 1 Mohallah Akram Park Gulberg III, Lahore",
       coreServices: [
         "Import & Export",
         "Global Sourcing",
@@ -131,7 +146,8 @@ const companyCards = [
   {
     id: "04",
     title: "Lucky Global Traders",
-    accent: "📦",
+    logo: tradersLogo,
+    companyImage: tradersFrame,
     text: "A dynamic trading company specializing in sourcing, procurement, and distribution of quality products across multiple industries with a trusted global supplier network and competitive pricing.",
     tags: [
       "Wholesale Supply",
@@ -143,6 +159,7 @@ const companyCards = [
       heading: "Lucky Global Traders",
       description:
         "A trading arm built to move products efficiently across sourcing, supply, and distribution workflows. The placeholder copy can be refined later to match the final business brief.",
+      address: "House # 32 A, Street # 1 Mohallah Akram Park Gulberg III, Lahore",
       coreServices: [
         "Wholesale Supply",
         "B2B Trading",
@@ -169,7 +186,8 @@ const companyCards = [
   {
     id: "05",
     title: "Lucky Foundation",
-    accent: "🌱",
+    logo: foundationLogo,
+    companyImage: foundationFrame,
     text: "Committed to education, healthcare, community development, and humanitarian support to create a brighter future for all.",
     tags: [
       "Education Support",
@@ -181,6 +199,7 @@ const companyCards = [
       heading: "Lucky Foundation",
       description:
         "Lucky Foundation is committed to education, healthcare, community development, and humanitarian support to create a brighter future for all. The content below is a clean placeholder structure that can be replaced later with the final foundation copy.",
+      address: "House # 32 A, Street # 1 Mohallah Akram Park Gulberg III, Lahore",
       coreServices: [
         "Education Support",
         "Healthcare Initiatives",
@@ -236,7 +255,7 @@ const DrawerPanel = styled.aside`
   top: 0;
   right: 0;
   z-index: 41;
-  width: min(50vw, 760px);
+  width: min(75vw, 1180px);
   height: 100vh;
   background: linear-gradient(
     180deg,
@@ -298,6 +317,111 @@ const DrawerHeader = styled.div`
 const DrawerBody = styled.div`
   padding: 22px 24px 28px;
   overflow-y: auto;
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+
+  @media (max-width: ${bp.lg}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const DrawerIntro = styled.div`
+  display: grid;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  align-self: start;
+
+  @media (max-width: ${bp.lg}) {
+    position: static;
+  }
+`;
+
+const DrawerVisual = styled.div`
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.96), rgba(26, 45, 79, 0.94));
+  box-shadow: 0 18px 42px rgba(10, 22, 40, 0.18);
+  min-height: 290px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 290px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+`;
+
+const DrawerSummary = styled.div`
+  background: ${colors.whitePure};
+  border: 1px solid ${colors.grayLight};
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 16px 34px rgba(10, 22, 40, 0.06);
+
+  .label {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(201, 168, 76, 0.12);
+    color: ${colors.navy};
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    margin: 0 0 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: ${colors.navy};
+  }
+
+  p {
+    margin: 0;
+    color: #5e6470;
+    line-height: 1.7;
+    font-size: 14px;
+  }
+`;
+
+const DrawerMeta = styled.div`
+  display: grid;
+  gap: 10px;
+`;
+
+const DrawerMetaItem = styled.div`
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(10, 22, 40, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+
+  .kicker {
+    display: block;
+    margin-bottom: 4px;
+    color: ${colors.gold};
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .value {
+    color: ${colors.navy};
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 600;
+  }
+`;
+
+const DrawerContent = styled.div`
   display: grid;
   gap: 18px;
 `;
@@ -794,12 +918,50 @@ const HeroVisual = styled.div`
   right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  width: 420px;
-  opacity: 0.12;
+  width: 440px;
+  height: 560px;
+  opacity: 0.54;
+  z-index: 1;
   pointer-events: none;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
 
-  @media (max-width: ${bp.xxl}) {
-    display: none;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: saturate(0.9) contrast(1.02);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 22, 40, 0.18) 0%,
+      rgba(10, 22, 40, 0.55) 100%
+    );
+  }
+
+  @media (max-width: 650px) {
+    inset: 0;
+    right: auto;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.18;
+    border-radius: 0;
+    box-shadow: none;
+
+    img {
+      height: 100%;
+      min-height: 100%;
+    }
   }
 `;
 
@@ -1102,12 +1264,12 @@ const CompanyCard = styled.article`
     width: 56px;
     height: 56px;
     border-radius: 12px;
-    background: rgba(10, 22, 40, 0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+    background: #fff;
+    border: 1px solid rgba(10, 22, 40, 0.08);
+    padding: 6px;
     flex-shrink: 0;
+    object-fit: contain;
+    display: block;
   }
 
   .number {
@@ -1142,7 +1304,7 @@ const CompanyCard = styled.article`
     .icon {
       width: 48px;
       height: 48px;
-      font-size: 18px;
+      padding: 5px;
     }
 
     h3 {
@@ -1455,91 +1617,7 @@ export default function HomePage() {
         <HeroGlow />
         <HeroGlow2 />
         <HeroVisual aria-hidden="true">
-          <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg">
-            <rect width="320" height="400" fill="#0a1628" />
-            <rect x="30" y="280" width="60" height="120" fill="#1a2d4f" />
-            <rect x="100" y="220" width="60" height="180" fill="#1a2d4f" />
-            <rect x="170" y="180" width="60" height="220" fill="#1a2d4f" />
-            <rect x="240" y="240" width="50" height="160" fill="#1a2d4f" />
-            <rect
-              x="30"
-              y="280"
-              width="60"
-              height="120"
-              fill="none"
-              stroke="#c9a84c"
-              strokeWidth="1"
-              opacity="0.4"
-            />
-            <rect
-              x="100"
-              y="220"
-              width="60"
-              height="180"
-              fill="none"
-              stroke="#c9a84c"
-              strokeWidth="1"
-              opacity="0.4"
-            />
-            <rect
-              x="170"
-              y="180"
-              width="60"
-              height="220"
-              fill="none"
-              stroke="#c9a84c"
-              strokeWidth="1"
-              opacity="0.4"
-            />
-            <rect
-              x="240"
-              y="240"
-              width="50"
-              height="160"
-              fill="none"
-              stroke="#c9a84c"
-              strokeWidth="1"
-              opacity="0.4"
-            />
-            <circle
-              cx="160"
-              cy="120"
-              r="60"
-              fill="none"
-              stroke="#c9a84c"
-              strokeWidth="1"
-              opacity="0.2"
-            />
-            <circle
-              cx="160"
-              cy="120"
-              r="40"
-              fill="none"
-              stroke="#c9a84c"
-              strokeWidth="1"
-              opacity="0.3"
-            />
-            <text
-              x="160"
-              y="132"
-              textAnchor="middle"
-              fontFamily="Playfair Display, serif"
-              fontSize="28"
-              fontWeight="700"
-              fill="#c9a84c"
-            >
-              LG
-            </text>
-            <line
-              x1="0"
-              y1="400"
-              x2="320"
-              y2="400"
-              stroke="#c9a84c"
-              strokeWidth="2"
-              opacity="0.5"
-            />
-          </svg>
+          <img src={ownerPic} alt="" />
         </HeroVisual>
 
         <HeroContent>
@@ -1792,7 +1870,7 @@ export default function HomePage() {
               <CompanyCard key={company.id}>
                 <div className="number">{company.id}</div>
                 <div className="card-heading">
-                  <div className="icon">{company.accent}</div>
+                  <img className="icon" src={company.logo} alt={`${company.title} logo`} />
                   <h3>{company.title}</h3>
                 </div>
                 <p>{company.text}</p>
@@ -1980,131 +2058,156 @@ export default function HomePage() {
             </DrawerHeader>
 
             <DrawerBody>
-              <DrawerCard>
-                <h4>About {activeCompany.details.heading}</h4>
-                <p>{activeCompany.details.description}</p>
-              </DrawerCard>
+              <DrawerIntro>
+                <DrawerVisual>
+                  <img
+                    src={activeCompany.companyImage || activeCompany.logo}
+                    alt={`${activeCompany.title} demo preview`}
+                  />
+                </DrawerVisual>
 
-              {activeCompany.details.about ? (
-                <DrawerCard>
-                  <h4>Our Values</h4>
-                  <ServiceList style={{ marginTop: "0" }}>
-                    {activeCompany.details.about.values.map((value) => (
-                      <ServiceItem key={value}>{value}</ServiceItem>
-                    ))}
-                  </ServiceList>
-                </DrawerCard>
-              ) : null}
+                <DrawerSummary>
+                  <span className="label">Company Snapshot</span>
+                  <h4>{activeCompany.details.heading}</h4>
+                  <p>{activeCompany.details.description}</p>
+                </DrawerSummary>
 
-              {activeCompany.details.focusAreas ? (
-                <DrawerCard>
-                  <h4>Our Focus Areas</h4>
-                  <BulletList>
-                    {activeCompany.details.focusAreas.map((area) => (
-                      <li key={area}>{area}</li>
-                    ))}
-                  </BulletList>
-                </DrawerCard>
-              ) : null}
+                <DrawerMeta>
+                  <DrawerMetaItem>
+                    <span className="kicker">Address</span>
+                    <span className="value">{activeCompany.details.address}</span>
+                  </DrawerMetaItem>
+                  <DrawerMetaItem>
+                    <span className="kicker">Type</span>
+                    <span className="value">{activeCompany.title}</span>
+                  </DrawerMetaItem>
+                </DrawerMeta>
+              </DrawerIntro>
 
-              {activeCompany.details.impact ? (
-                <DrawerCard>
-                  <h4>Our Impact</h4>
-                  <ServiceList>
-                    {activeCompany.details.impact.map((item) => (
-                      <ServiceItem key={item}>{item}</ServiceItem>
-                    ))}
-                  </ServiceList>
-                </DrawerCard>
-              ) : null}
-
-              {activeCompany.details.currentProjects ? (
-                <DrawerCard>
-                  <h4>Current Projects</h4>
-                  <BulletList>
-                    {activeCompany.details.currentProjects.map((project) => (
-                      <li key={project}>{project}</li>
-                    ))}
-                  </BulletList>
-                </DrawerCard>
-              ) : null}
-
-              {activeCompany.details.getInvolved ? (
-                <DrawerCard>
-                  <h4>Get Involved</h4>
-                  <ServiceList>
-                    {activeCompany.details.getInvolved.map((item) => (
-                      <ServiceItem key={item}>{item}</ServiceItem>
-                    ))}
-                  </ServiceList>
-                </DrawerCard>
-              ) : null}
-
-              <DrawerCard>
-                <h4>Core Services</h4>
-                <ServiceList>
-                  {(activeCompany.details.coreServices || []).map((service) => (
-                    <ServiceItem key={service}>{service}</ServiceItem>
-                  ))}
-                </ServiceList>
-              </DrawerCard>
-
-              <DrawerCard>
-                <h4>Why Choose Us</h4>
-                <BulletList>
-                  {(
-                    activeCompany.details.whyChooseUs ||
-                    activeCompany.details.about?.values ||
-                    []
-                  ).map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </BulletList>
-              </DrawerCard>
-
-              <DrawerCard>
-                <h4>Mission &amp; Vision</h4>
-                <MissionVisionGrid>
-                  <DrawerCard style={{ background: "rgba(10, 22, 40, 0.03)" }}>
-                    <h4>Mission</h4>
-                    <p>
-                      {activeCompany.details.missionVision?.mission ||
-                        activeCompany.details.about?.mission ||
-                        "Mission details will be added here."}
-                    </p>
+              <DrawerContent>
+                {activeCompany.details.about ? (
+                  <DrawerCard>
+                    <h4>Our Values</h4>
+                    <ServiceList style={{ marginTop: "0" }}>
+                      {activeCompany.details.about.values.map((value) => (
+                        <ServiceItem key={value}>{value}</ServiceItem>
+                      ))}
+                    </ServiceList>
                   </DrawerCard>
-                  <DrawerCard
-                    style={{ background: "rgba(201, 168, 76, 0.08)" }}
+                ) : null}
+
+                {activeCompany.details.focusAreas ? (
+                  <DrawerCard>
+                    <h4>Our Focus Areas</h4>
+                    <BulletList>
+                      {activeCompany.details.focusAreas.map((area) => (
+                        <li key={area}>{area}</li>
+                      ))}
+                    </BulletList>
+                  </DrawerCard>
+                ) : null}
+
+                {activeCompany.details.impact ? (
+                  <DrawerCard>
+                    <h4>Our Impact</h4>
+                    <ServiceList>
+                      {activeCompany.details.impact.map((item) => (
+                        <ServiceItem key={item}>{item}</ServiceItem>
+                      ))}
+                    </ServiceList>
+                  </DrawerCard>
+                ) : null}
+
+                {activeCompany.details.currentProjects ? (
+                  <DrawerCard>
+                    <h4>Current Projects</h4>
+                    <BulletList>
+                      {activeCompany.details.currentProjects.map((project) => (
+                        <li key={project}>{project}</li>
+                      ))}
+                    </BulletList>
+                  </DrawerCard>
+                ) : null}
+
+                {activeCompany.details.getInvolved ? (
+                  <DrawerCard>
+                    <h4>Get Involved</h4>
+                    <ServiceList>
+                      {activeCompany.details.getInvolved.map((item) => (
+                        <ServiceItem key={item}>{item}</ServiceItem>
+                      ))}
+                    </ServiceList>
+                  </DrawerCard>
+                ) : null}
+
+                <DrawerCard>
+                  <h4>Core Services</h4>
+                  <ServiceList>
+                    {(activeCompany.details.coreServices || []).map((service) => (
+                      <ServiceItem key={service}>{service}</ServiceItem>
+                    ))}
+                  </ServiceList>
+                </DrawerCard>
+
+                <DrawerCard>
+                  <h4>Why Choose Us</h4>
+                  <BulletList>
+                    {(
+                      activeCompany.details.whyChooseUs ||
+                      activeCompany.details.about?.values ||
+                      []
+                    ).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </BulletList>
+                </DrawerCard>
+
+                <DrawerCard>
+                  <h4>Mission &amp; Vision</h4>
+                  <MissionVisionGrid>
+                    <DrawerCard
+                      style={{ background: "rgba(10, 22, 40, 0.03)" }}
+                    >
+                      <h4>Mission</h4>
+                      <p>
+                        {activeCompany.details.missionVision?.mission ||
+                          activeCompany.details.about?.mission ||
+                          "Mission details will be added here."}
+                      </p>
+                    </DrawerCard>
+                    <DrawerCard
+                      style={{ background: "rgba(201, 168, 76, 0.08)" }}
+                    >
+                      <h4>Vision</h4>
+                      <p>
+                        {activeCompany.details.missionVision?.vision ||
+                          activeCompany.details.about?.vision ||
+                          "Vision details will be added here."}
+                      </p>
+                    </DrawerCard>
+                  </MissionVisionGrid>
+                </DrawerCard>
+
+                <ReadyCard>
+                  <div
+                    className="eyebrow"
+                    style={{
+                      color: colors.gold,
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      fontSize: "11px",
+                      marginBottom: "6px",
+                    }}
                   >
-                    <h4>Vision</h4>
-                    <p>
-                      {activeCompany.details.missionVision?.vision ||
-                        activeCompany.details.about?.vision ||
-                        "Vision details will be added here."}
-                    </p>
-                  </DrawerCard>
-                </MissionVisionGrid>
-              </DrawerCard>
-
-              <ReadyCard>
-                <div
-                  className="eyebrow"
-                  style={{
-                    color: colors.gold,
-                    letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                    fontSize: "11px",
-                    marginBottom: "6px",
-                  }}
-                >
-                  Ready to work with us
-                </div>
-                <h4>{activeCompany.details.readyTitle}</h4>
-                <p>{activeCompany.details.readyText}</p>
-                <a href="#about" onClick={() => setActiveCompany(null)}>
-                  Talk to our team
-                </a>
-              </ReadyCard>
+                    Ready to work with us
+                  </div>
+                  <h4>{activeCompany.details.readyTitle}</h4>
+                  <p>{activeCompany.details.readyText}</p>
+                  <a href="#about" onClick={() => setActiveCompany(null)}>
+                    Talk to our team
+                  </a>
+                </ReadyCard>
+              </DrawerContent>
             </DrawerBody>
           </>
         ) : null}
@@ -2112,3 +2215,4 @@ export default function HomePage() {
     </Page>
   );
 }
+
