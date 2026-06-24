@@ -13,7 +13,13 @@ import tradersLogo from "../assets/icons/lg_traders.png";
 import foundationLogo from "../assets/icons/lg_foundation.png";
 import buildersFrame from "../assets/frame/frame_builders.jpeg";
 import holdingFrame from "../assets/frame/frame_holding.jpeg";
+import holdingFrameOne from "../assets/frame/global_holidng_frames/lgh_1.jpeg";
+import holdingFrameTwo from "../assets/frame/global_holidng_frames/lgh_2.jpeg";
 import erajFrame from "../assets/frame/frame_eraj.jpeg";
+import erajFrameOne from "../assets/frame/eraj_holding_frame/eraj_1.jpeg";
+import erajFrameTwo from "../assets/frame/eraj_holding_frame/eraj_2.jpeg";
+import erajFrameThree from "../assets/frame/eraj_holding_frame/eraj_3.jpeg";
+import erajFrameFour from "../assets/frame/eraj_holding_frame/eraj_4.jpeg";
 import tradersFrame from "../assets/frame/frame_traders.jpeg";
 import foundationFrame from "../assets/frame/frame_foundation.jpeg";
 
@@ -101,6 +107,20 @@ const companyCards = [
       readyTitle: "Looking for strategic partnership?",
       readyText:
         "We can discuss building development or property transactions once your details are ready.",
+      categoryDetails: [
+        {
+          title: "Development of Building Projects",
+          image: holdingFrameOne,
+          description:
+            "Lucky Global Holding Limited specializes in the planning, development, and management of residential, commercial, and mixed-use building projects. Our services include project conception, land development, construction coordination, infrastructure planning, and delivering high-quality real estate developments that meet modern standards and client expectations.",
+        },
+        {
+          title: "Buying and Selling of Own Real Estate",
+          image: holdingFrameTwo,
+          description:
+            "The company is actively engaged in acquiring, owning, managing, and selling real estate properties. We invest in residential, commercial, and industrial properties, focusing on long-term value creation, strategic property management, and profitable real estate transactions to maximize returns for our stakeholders.",
+        },
+      ],
     },
   },
   {
@@ -141,6 +161,12 @@ const companyCards = [
       readyTitle: "Need a trading partner?",
       readyText:
         "Send us your requirements and we will tailor a trading response around them.",
+      galleryImages: [
+        erajFrameOne,
+        erajFrameTwo,
+        erajFrameThree,
+        erajFrameFour,
+      ],
     },
   },
   {
@@ -255,7 +281,7 @@ const DrawerPanel = styled.aside`
   top: 0;
   right: 0;
   z-index: 41;
-  width: min(75vw, 1180px);
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(
     180deg,
@@ -447,6 +473,84 @@ const DrawerCard = styled.section`
     line-height: 1.7;
     font-size: 14px;
   }
+`;
+
+const CategorySection = styled.div`
+  display: grid;
+  gap: 14px;
+`;
+
+const CategoryGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+
+  @media (max-width: ${bp.lg}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const CategoryCard = styled.div`
+  display: grid;
+  gap: 12px;
+`;
+
+const CategoryImage = styled.img`
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 14px 30px rgba(10, 22, 40, 0.08);
+`;
+
+const CategoryText = styled.div`
+  .eyebrow {
+    display: inline-flex;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(201, 168, 76, 0.12);
+    color: ${colors.navy};
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    color: #5e6470;
+    line-height: 1.7;
+    font-size: 14px;
+  }
+`;
+
+const GallerySection = styled.div`
+  display: grid;
+  gap: 14px;
+`;
+
+const GalleryGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+
+  @media (max-width: ${bp.lg}) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: ${bp.mobile}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const GalleryImage = styled.img`
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  box-shadow: 0 14px 30px rgba(10, 22, 40, 0.08);
 `;
 
 // const DrawerSubCard = styled.div`
@@ -2085,6 +2189,23 @@ export default function HomePage() {
               </DrawerIntro>
 
               <DrawerContent>
+                {activeCompany.details.categoryDetails ? (
+                  <CategorySection>
+                    <h4>Business Categories</h4>
+                    <CategoryGrid>
+                      {activeCompany.details.categoryDetails.map((item) => (
+                        <CategoryCard key={item.title}>
+                          <CategoryImage src={item.image} alt={item.title} />
+                          <CategoryText>
+                            <span className="eyebrow">{item.title}</span>
+                            <p>{item.description}</p>
+                          </CategoryText>
+                        </CategoryCard>
+                      ))}
+                    </CategoryGrid>
+                  </CategorySection>
+                ) : null}
+
                 {activeCompany.details.about ? (
                   <DrawerCard>
                     <h4>Our Values</h4>
@@ -2161,6 +2282,20 @@ export default function HomePage() {
                     ))}
                   </BulletList>
                 </DrawerCard>
+
+                {activeCompany.details.galleryImages ? (
+                  <GallerySection>
+                    <GalleryGrid>
+                      {activeCompany.details.galleryImages.map((image, index) => (
+                        <GalleryImage
+                          key={`${activeCompany.id}-gallery-${index}`}
+                          src={image}
+                          alt={`${activeCompany.title} frame ${index + 1}`}
+                        />
+                      ))}
+                    </GalleryGrid>
+                  </GallerySection>
+                ) : null}
 
                 <DrawerCard>
                   <h4>Mission &amp; Vision</h4>

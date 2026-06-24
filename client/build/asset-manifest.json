@@ -1,14 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.05a3f39e.css",
-    "main.js": "/static/js/main.0bef2286.js",
+    "main.js": "/static/js/main.2d2a24d0.js",
+    "static/media/frame_traders.jpeg": "/static/media/frame_traders.fb01adb03515e8031bb2.jpeg",
     "static/media/lucky-logo.png": "/static/media/lucky-logo.5f205075f32fd83d1d4b.png",
+    "static/media/lg_builders.png": "/static/media/lg_builders.0a0ad3ba2a67a88fd7f3.png",
+    "static/media/lg_foundation.png": "/static/media/lg_foundation.6bc6ffea2a9a5a253a2b.png",
+    "static/media/lg_traders.png": "/static/media/lg_traders.cabea6e23a1d27d77b2b.png",
+    "static/media/lg_eraj.png": "/static/media/lg_eraj.40e665c4f88eb9bc0eb4.png",
+    "static/media/lg_holders.png": "/static/media/lg_holders.fcc16d1006f8a104c093.png",
+    "static/media/eraj_3.jpeg": "/static/media/eraj_3.93a4ec669577e35ca7bc.jpeg",
+    "static/media/eraj_2.jpeg": "/static/media/eraj_2.f8b378beec881dfc061b.jpeg",
+    "static/media/frame_foundation.jpeg": "/static/media/frame_foundation.afcdf839b1308e925a78.jpeg",
+    "static/media/owner.jpeg": "/static/media/owner.afcdf839b1308e925a78.jpeg",
+    "static/media/eraj_1.jpeg": "/static/media/eraj_1.bcaa104d89efd5446694.jpeg",
+    "static/media/eraj_4.jpeg": "/static/media/eraj_4.91c44cffb46cadcdafd3.jpeg",
+    "static/media/lgh_1.jpeg": "/static/media/lgh_1.5bb51e888acca443f7fd.jpeg",
+    "static/media/lgh_2.jpeg": "/static/media/lgh_2.4286157c68da20359181.jpeg",
+    "static/media/frame_builders.jpeg": "/static/media/frame_builders.abcfe2585017a9fe15fb.jpeg",
+    "static/media/frame_holding.jpeg": "/static/media/frame_holding.320fddc753783053e8a6.jpeg",
+    "static/media/frame_eraj.jpeg": "/static/media/frame_eraj.69613ea4e5f9ca1153d0.jpeg",
     "index.html": "/index.html",
     "main.05a3f39e.css.map": "/static/css/main.05a3f39e.css.map",
-    "main.0bef2286.js.map": "/static/js/main.0bef2286.js.map"
+    "main.2d2a24d0.js.map": "/static/js/main.2d2a24d0.js.map"
   },
   "entrypoints": [
     "static/css/main.05a3f39e.css",
-    "static/js/main.0bef2286.js"
+    "static/js/main.2d2a24d0.js"
   ]
 }
