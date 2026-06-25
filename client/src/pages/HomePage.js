@@ -21,6 +21,11 @@ import erajFrameTwo from "../assets/frame/eraj_holding_frame/eraj_2.jpeg";
 import erajFrameThree from "../assets/frame/eraj_holding_frame/eraj_3.jpeg";
 import erajFrameFour from "../assets/frame/eraj_holding_frame/eraj_4.jpeg";
 import tradersFrame from "../assets/frame/frame_traders.jpeg";
+import tradersFrameOne from "../assets/frame/global_trader_frame/lgt_1.jpeg";
+import tradersFrameTwo from "../assets/frame/global_trader_frame/lgt_2.jpeg";
+import tradersFrameThree from "../assets/frame/global_trader_frame/lgt_3.jpeg";
+import tradersFrameFour from "../assets/frame/global_trader_frame/lgt_4.jpeg";
+import tradersFrameFive from "../assets/frame/global_trader_frame/lgt_5.jpeg";
 import foundationFrame from "../assets/frame/frame_foundation.jpeg";
 
 const pageStats = [
@@ -207,6 +212,13 @@ const companyCards = [
       readyTitle: "Let’s trade with confidence.",
       readyText:
         "We can align pricing, supply, and logistics once your details are shared.",
+      galleryImages: [
+        // tradersFrameOne,
+        tradersFrameTwo,
+        tradersFrameThree,
+        tradersFrameFour,
+        tradersFrameFive,
+      ],
     },
   },
   {
