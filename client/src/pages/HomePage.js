@@ -213,7 +213,6 @@ const companyCards = [
       readyText:
         "We can align pricing, supply, and logistics once your details are shared.",
       galleryImages: [
-        // tradersFrameOne,
         tradersFrameTwo,
         tradersFrameThree,
         tradersFrameFour,
@@ -237,7 +236,7 @@ const companyCards = [
       heading: "Lucky Foundation",
       description:
         "Lucky Foundation is committed to education, healthcare, community development, and humanitarian support to create a brighter future for all. The content below is a clean placeholder structure that can be replaced later with the final foundation copy.",
-      address: "House # 32 A, Street # 1 Mohallah Akram Park Gulberg III, Lahore",
+      address: "Office No. 1, 4th Floor, Value Tower, 13/B1 B2 Commercial Zone، 1 Ghalib Road, Lahore, 54000, Pakistan",
       coreServices: [
         "Education Support",
         "Healthcare Initiatives",
